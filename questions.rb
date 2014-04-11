@@ -188,6 +188,9 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+  bad_words = ['a', 'and', 'the']
+  new_string = string.capitalize
+  new_string.split(' ').map { |word| bad_words.include?(word) ? word : word.capitalize }.join(' ')
 end
 
 # return true if a string contains any special characters
