@@ -1,8 +1,9 @@
-# turn an array (with an even number of elements) into a hash, by
-# pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
-# {'a' => 'b', 'c' => 'd'}
-def convert_array_to_a_hash(array)
-  Hash[array.each_slice(2).to_a] if array.count % 2 == 0
+# get all the letters used in an array of words and return
+# it as a array of letters, in alphabetical order
+# . e.g. the array ['cat', 'dog', 'fish'] becomes
+# ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
+def get_all_letters_in_array_of_words(array)
+  array.map { |word| word.split('')}.flatten.sort
 end
 
-p convert_array_to_a_hash(['a', 'b', 'c', 'd'])
+p get_all_letters_in_array_of_words(['cat', 'dog', 'fish'])
