@@ -1,12 +1,9 @@
-# turn an array of numbers into two arrays of numbers, one an array of 
-# even numbers, the other an array of odd numbers
-# even numbers come first
-# so [1, 2, 3, 4, 5, 6] becomes [[2, 4, 6], [1, 3, 5]]
-def separate_array_into_even_and_odd_numbers(array)
-  evens = array.select { |number| number % 2 == 0 }
-  odds = array.select { |number| number % 2 != 0 }
-  [evens, odds]
-  [array.select { |number| number % 2 == 0 }, array.select { |number| number % 2 != 0 } ]
+# count the numbers of elements in an element which are palindromes
+# a palindrome is a word that's the same backwards as forward
+# e.g. 'bob'. So in the array ['bob', 'radar', 'eat'], there
+# are 2 palindromes (bob and radar), so the method should return 2
+def number_of_elements_that_are_palindromes(array)
+  array.select {|word| word if word == word.reverse}.count
 end
 
-p separate_array_into_even_and_odd_numbers([1, 2, 3, 4, 5, 6])
+p number_of_elements_that_are_palindromes(['bob', 'radar', 'eat'])
