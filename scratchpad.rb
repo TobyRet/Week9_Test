@@ -1,7 +1,6 @@
-# turn an array into itself repeated twice. So [1, 2, 3]
-# becomes [1, 2, 3, 1, 2, 3]
-def double_array(array)
-  array + array
+# convert a symbol into a string
+def turn_symbol_into_string(symbol)
+  symbol.to_s
 end
 
-p double_array([1, 2, 3])
+p turn_symbol_into_string(:cat)
