@@ -1,7 +1,8 @@
-# round down a float up and convert it to an Integer,
-# so 9.52 becomes 9
-def round_down_number(float)
-  float.floor
+# get the domain name *without* the .com part, from an email address
+# so alex@makersacademy.com becomes makersacademy
+def get_domain_name_from_email_address(email)
+  email.slice(/[^@]+(?=\.)/)
 end
 
-p round_down_number(9.52)
+p get_domain_name_from_email_address('alex@makersacademy.com')
+
