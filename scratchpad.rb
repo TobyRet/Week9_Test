@@ -1,8 +1,6 @@
-# should return true for a 3 dot range like 1...20, false for a 
-# normal 2 dot range
-def is_a_3_dot_range?(range)
-  range.exclude_end?
+# get the square root of a number
+def square_root_of(number)
+  Math.sqrt(number)
 end
 
-p is_a_3_dot_range?(1...20)
-
+p square_root_of(16)
