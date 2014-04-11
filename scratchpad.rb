@@ -1,7 +1,7 @@
-# round up a float up and convert it to an Integer,
-# so 3.214 becomes 4
-def round_up_number(float)
-  float.ceil
+# round down a float up and convert it to an Integer,
+# so 9.52 becomes 9
+def round_down_number(float)
+  float.floor
 end
 
-p round_up_number(3.214)
+p round_down_number(9.52)
