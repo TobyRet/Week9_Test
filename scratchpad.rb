@@ -1,5 +1,11 @@
-def reverse_every_element_in_array(array)
-  array.map { |word| word.reverse }
+# given an array of student names, like ['Bob', 'Dave', 'Clive']
+# give every possible pairing - in this case:
+# [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
+# make sure you don't have the same pairing twice, 
+
+def every_possible_pairing_of_students(array)
+  array.combination(2).to_a
 end
 
-p reverse_every_element_in_array(["toby", "rivka"])
+
+p every_possible_pairing_of_students(['Bob', 'Dave', 'Clive'])
