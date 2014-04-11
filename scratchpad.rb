@@ -1,13 +1,8 @@
-# return the shortest word in an array
-#def shortest_word_in_array(array)
-#  array.sort_by { |word| word.length }.shift
-#end
-#
-#p shortest_word_in_array(['handcream', 'coffee'])
+# add up all the numbers in an array, so [1, 3, 5, 6]
+# returns 15
 
-# return the longest word in an array
-def longest_word_in_array(array)
-  array.sort_by { |word| word.length }.reverse.shift
+def total_of_array(array)
+  array.inject(&:+)
 end
 
-p longest_word_in_array(['handcream', 'coffee'])
+p total_of_array([1, 3, 5, 6])
