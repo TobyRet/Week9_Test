@@ -1,9 +1,8 @@
-# get all the elements in an array, up until the first element
-# which is greater than five. e.g.
-# [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
-# becomes [1, 3, 5, 4, 1, 2]
-def get_elements_until_greater_than_five(array)
-  array.take_while { |n| n <=5 }
-end 
+# turn an array (with an even number of elements) into a hash, by
+# pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
+# {'a' => 'b', 'c' => 'd'}
+def convert_array_to_a_hash(array)
+  Hash[array.each_slice(2).to_a] if array.count % 2 == 0
+end
 
-p get_elements_until_greater_than_five([1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7])
+p convert_array_to_a_hash(['a', 'b', 'c', 'd'])
