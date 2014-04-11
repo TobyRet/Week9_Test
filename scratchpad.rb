@@ -1,9 +1,8 @@
-# swap the keys and values in a hash. e.g.
-# in a hash where the keys and values are all numbers
-# add all the keys and all the values together, e.g.
-# {1 => 1, 2 => 2} becomes 6
-def add_together_keys_and_values(hash)
-  (hash.keys + hash.values).inject(&:+)
+# take out all the capital letters from a string
+# so 'Hello JohnDoe' becomes 'ello ohnoe'
+
+def remove_capital_letters_from_string(string)
+  string.gsub(/[A-Z]/,'')
 end
 
-p add_together_keys_and_values({1 => 1, 2 => 2})
+p remove_capital_letters_from_string('Hello JohnDoe')
