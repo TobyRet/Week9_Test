@@ -84,6 +84,7 @@ end
 
 # return the shortest word in an array
 def shortest_word_in_array(array)
+  array.sort_by { |word| word.length }.shift
 end
 
 # return the longest word in an array
