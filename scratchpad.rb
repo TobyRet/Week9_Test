@@ -1,11 +1,7 @@
-# given an array of student names, like ['Bob', 'Dave', 'Clive']
-# give every possible pairing - in this case:
-# [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
-# make sure you don't have the same pairing twice, 
-
-def every_possible_pairing_of_students(array)
-  array.combination(2).to_a
+# discard the first 3 elements of an array, 
+# e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
+def all_elements_except_first_3(array)
+  array[3..-1]
 end
 
-
-p every_possible_pairing_of_students(['Bob', 'Dave', 'Clive'])
+p all_elements_except_first_3([1, 2, 3, 4, 5, 6] )
