@@ -1,8 +1,9 @@
 # swap the keys and values in a hash. e.g.
-# {'a' => 'b', 'c' => 'd'} becomes
-# {'b' => 'a', 'd' => 'c'}
-def swap_keys_and_values_in_a_hash(hash)
-  hash.invert
+# in a hash where the keys and values are all numbers
+# add all the keys and all the values together, e.g.
+# {1 => 1, 2 => 2} becomes 6
+def add_together_keys_and_values(hash)
+  (hash.keys + hash.values).inject(&:+)
 end
 
-p swap_keys_and_values_in_a_hash({'a' => 'b', 'c' => 'd'})
+p add_together_keys_and_values({1 => 1, 2 => 2})
