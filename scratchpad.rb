@@ -1,9 +1,8 @@
-# get all the letters used in an array of words and return
-# it as a array of letters, in alphabetical order
-# . e.g. the array ['cat', 'dog', 'fish'] becomes
-# ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
-def get_all_letters_in_array_of_words(array)
-  array.map { |word| word.split('')}.flatten.sort
+# swap the keys and values in a hash. e.g.
+# {'a' => 'b', 'c' => 'd'} becomes
+# {'b' => 'a', 'd' => 'c'}
+def swap_keys_and_values_in_a_hash(hash)
+  hash.invert
 end
 
-p get_all_letters_in_array_of_words(['cat', 'dog', 'fish'])
+p swap_keys_and_values_in_a_hash({'a' => 'b', 'c' => 'd'})
