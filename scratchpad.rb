@@ -1,6 +1,7 @@
-# convert a symbol into a string
-def turn_symbol_into_string(symbol)
-  symbol.to_s
+# get the average from an array, rounded to the nearest integer
+# so [10, 15, 25] should return 17
+def average_of_array(array)
+  (array.inject(&:+).to_f / array.length).ceil
 end
 
-p turn_symbol_into_string(:cat)
+p average_of_array([10, 15, 25])
