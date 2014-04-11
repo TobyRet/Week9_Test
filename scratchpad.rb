@@ -1,8 +1,7 @@
-# get the domain name *without* the .com part, from an email address
-# so alex@makersacademy.com becomes makersacademy
-def get_domain_name_from_email_address(email)
-  email.slice(/[^@]+(?=\.)/)
+# get the upper limit of a range. e.g. for the range 1..20, you
+# should return 20
+def get_upper_limit_of(range)
+  range.max
 end
 
-p get_domain_name_from_email_address('alex@makersacademy.com')
-
+p get_upper_limit_of(1..20)
