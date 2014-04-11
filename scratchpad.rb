@@ -1,7 +1,8 @@
-# get the upper limit of a range. e.g. for the range 1..20, you
-# should return 20
-def get_upper_limit_of(range)
-  range.max
+# should return true for a 3 dot range like 1...20, false for a 
+# normal 2 dot range
+def is_a_3_dot_range?(range)
+  range.exclude_end?
 end
 
-p get_upper_limit_of(1..20)
+p is_a_3_dot_range?(1...20)
+
