@@ -1,5 +1,5 @@
-def remove_nils_and_false_from_array(array)
-  array.delete_if { |x| x == false }.compact
+def reverse_every_element_in_array(array)
+  array.map { |word| word.reverse }
 end
 
-p remove_nils_and_false_from_array(['a', 'b', nil, nil, false, 'c', nil])
+p reverse_every_element_in_array(["toby", "rivka"])
