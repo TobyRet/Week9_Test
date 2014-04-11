@@ -1,6 +1,7 @@
-# add an element to the beginning of an array
-def add_element_to_beginning_of_array(array, element)
-  array.unshift(element)
+# sort an array of words by their last letter, e.g.
+# ['sky', 'puma', 'maker'] becomes ['puma', 'maker', 'sky']
+def array_sort_by_last_letter_of_word(array)
+  array.sort_by { |word| word[-1] }
 end
 
-p add_element_to_beginning_of_array([0,0,0], 1)
+p array_sort_by_last_letter_of_word(['sky', 'puma', 'maker'])
