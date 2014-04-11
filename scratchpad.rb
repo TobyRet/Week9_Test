@@ -1,8 +1,7 @@
-# add up all the numbers in an array, so [1, 3, 5, 6]
-# returns 15
-
-def total_of_array(array)
-  array.inject(&:+)
+# turn an array into itself repeated twice. So [1, 2, 3]
+# becomes [1, 2, 3, 1, 2, 3]
+def double_array(array)
+  array + array
 end
 
-p total_of_array([1, 3, 5, 6])
+p double_array([1, 2, 3])
