@@ -1,14 +1,13 @@
-# capitalize the first letter in each word of a string, 
-#  except 'a', 'and' and 'the'
-# *unless* they come at the start of the start of the string, e.g.
-# 'the lion the witch and the wardrobe' becomes
-# 'The Lion the Witch and the Wardrobe'
-def titleize_a_string(string)
-  bad_words = ['a', 'and', 'the']
-  new_string = string.capitalize
-  new_string.split(' ').map { |word| bad_words.include?(word) ? word : word.capitalize }.join(' ') 
+# call an arbitrary method from a string. so if I
+# called call_method_from_string('foobar')
+# the method foobar should be invoked
+def call_method_from_string(str_method)
+  str_method.send(str_method.to_s)
 end
 
-puts titleize_a_string('the lion the witch and the wardrobe')
+def hello
+  'hello'
+end
 
-puts "this is a sentence".capitalize
+puts call_method_from_string('hello')
+
